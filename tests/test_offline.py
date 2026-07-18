@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Offline unit tests — no token, no network. Run: python -m unittest -v
 
-    cd yandex-direct/scripts && python -m unittest discover -s ../tests -v
+    cd scripts && python -m unittest discover -s ../tests -v
 """
 import os
 import sys

@@ -25,9 +25,9 @@ ROI. Direct API v5 only, Python **stdlib** (no `pip install`).
 
 This skill consolidates five previously separate community Yandex.Direct
 skills into one, and its audit/optimization logic is configured against a set
-of practitioner articles about where Yandex.Direct budgets actually leak (see
-`статьи.md` at the repo root and `references/budget-leak-checklist.md` /
-`references/unit-economics.md`, which distill them into automated checks).
+of practitioner articles about where Yandex.Direct budgets actually leak —
+distilled into `references/budget-leak-checklist.md` and
+`references/unit-economics.md` as automated checks.
 
 ## First: mandatory onboarding
 Before any API action, the agent must collect and confirm two access blocks:
@@ -70,7 +70,7 @@ changes (`optimize.py --apply`) on a live account.
 | Script | Purpose |
 |--------|---------|
 | `direct_api.py` | Core client. `ping`, raw `call`. Batch-error parsing + cost guard |
-| `audit.py` | **Account audit**: 65 checks (YD01-YD65), weighted score 0-100, grade A-F. Leads with the 7 budget-leak checks from `статьи.md` |
+| `audit.py` | **Account audit**: 65 checks (YD01-YD65), weighted score 0-100, grade A-F. Leads with the 7 budget-leak checks from `references/budget-leak-checklist.md` |
 | `build.py` | **Orchestrator**: whole campaign from one blueprint, idempotent, dry-run |
 | `state.py` | Local id-map (no duplicate creates) + audit log (`changelog.jsonl`) |
 | `campaigns.py` | create / list / suspend / resume / set-budget / strategy |
@@ -229,8 +229,8 @@ cheap guard, `audit.py` weekly or monthly to catch settings drift (YD65:
 
 ## Reference files (read when relevant)
 - `references/setup-guide.md` — token, Metrica, config (onboarding).
-- `references/budget-leak-checklist.md` — the 7 hidden settings from
-  `статьи.md` that burn budget by default, and how to fix each one.
+- `references/budget-leak-checklist.md` — the 7 hidden settings that burn
+  budget by default, and how to fix each one.
 - `references/unit-economics.md` — `target_cpa`/`max_cpc` formulas, the
   "≥10 conversions to learn" rule, the 3x kill rule.
 - `references/yandex-audit.md` — all 65 audit checks (YD01-YD65) with severity.

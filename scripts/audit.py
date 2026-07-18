@@ -549,7 +549,8 @@ def print_report(checks, pts, days):
     print(f"АУДИТ ЯНДЕКС ДИРЕКТ — окно {days} дней")
     print("=" * 78)
 
-    print("\n## 7 скрытых настроек, которые сливают бюджет (см. статьи.md)\n")
+    print("\n## 7 скрытых настроек, которые сливают бюджет "
+          "(references/budget-leak-checklist.md)\n")
     for c in sorted(leaks, key=lambda c: -SEVERITY_WEIGHT.get(c.severity, 0)):
         mark = {"PASS": "OK ", "WARNING": "!! ", "FAIL": "XX ", "N/A": "-- "}[c.status]
         print(f"  [{mark}] {c.id:<8} {c.name}")
