@@ -1,0 +1,18 @@
+# secrets — never commit
+scripts/config.json
+scripts/config.local.json
+*.token
+
+# local state / audit trail (account-specific)
+scripts/state.json
+scripts/changelog.jsonl
+
+# generated ad payloads / reports
+*.tsv
+ads*.json
+sales*.csv
+!assets/campaign_blueprint.example.json
+
+# python
+__pycache__/
+*.pyc
