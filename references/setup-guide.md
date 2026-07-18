@@ -52,7 +52,7 @@ API Директа требует OAuth-токен (это не пароль о�
 ## Шаг 3. Заполни config.json
 
 ```bash
-cd yandex-direct/scripts
+cd scripts
 cp config.example.json config.json
 ```
 
@@ -118,7 +118,7 @@ cp config.example.json config.json
 ## Шаг 4. Проверка
 
 ```bash
-cd yandex-direct/scripts
+cd scripts
 python direct_api.py ping
 ```
 

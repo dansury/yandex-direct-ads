@@ -25,7 +25,8 @@ python audit.py --campaign <id> --days 30 --format json   # or omit --campaign f
 FAIL/N/A per check, and returns the weighted score + grade — you do not
 recompute the scoring formula by hand. YD56-YD65 are the "7 hidden
 settings" budget-leak checks (`references/budget-leak-checklist.md`,
-sourced from `статьи.md`); they matter most and should lead the report.
+distilled from practitioner articles); they matter most and should lead
+the report.
 
 ### Step 2. Read supporting references only as needed
 
@@ -64,7 +65,7 @@ Output format:
 
 - Always use Russian for the report output.
 - Lead with the budget-leak section (YD56-YD64) — it is the highest ROI
-  fix, per `статьи.md`.
+  fix, per `references/budget-leak-checklist.md`.
 - N/A checks are not failures — say what manual step would resolve them
   instead of guessing a verdict `audit.py` couldn't determine.
 - Sort the action plan by: Critical → High → Medium → Low.
