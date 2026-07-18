@@ -1,0 +1,48 @@
+{
+  "_comment": "Исполняемый blueprint. Запуск: python build.py --blueprint этот_файл.json [--apply]. build.py создаёт всё идемпотентно (state.json не даёт дублей).",
+  "campaign": {
+    "name": "Search RU — Диваны",
+    "daily_budget": 2000,
+    "strategy": "manual",
+    "goal_id": null,
+    "target_cpa": null,
+    "start": "2026-06-15"
+  },
+  "adgroups": [
+    {
+      "name": "Горячий спрос — купить диван",
+      "region_ids": [213],
+      "keywords": [
+        "купить диван",
+        "диван купить москва",
+        "заказать диван",
+        "диван в наличии -бесплатно -своими руками"
+      ],
+      "minus_words": ["бесплатно", "своими руками", "б/у", "авито"],
+      "ads": [
+        {
+          "title": "Купить диван в Москве — каталог 2024",
+          "title2": "Доставка за 1 день",
+          "text": "500+ моделей в наличии. Скидки до 30%. Бесплатный замер. Закажите!",
+          "href": "https://example.com/divany?utm_source=yandex&utm_medium=cpc&utm_campaign={campaign_id}",
+          "display_path": "divany",
+          "sitelinks": [
+            {"title": "Угловые", "href": "https://example.com/uglovye", "description": "от 19 900 ₽"},
+            {"title": "Прямые", "href": "https://example.com/pryamye"},
+            {"title": "Раскладные", "href": "https://example.com/raskladnye"},
+            {"title": "Распродажа", "href": "https://example.com/sale", "description": "скидки до 50%"}
+          ],
+          "callouts": ["Гарантия 18 мес", "Рассрочка 0%", "Замер бесплатно", "Доставка по РФ"]
+        },
+        {
+          "title": "Диваны от производителя — без наценки",
+          "title2": "Рассрочка 0%",
+          "text": "Прямые поставки с фабрики. Цены ниже на 25%. Гарантия 18 месяцев.",
+          "href": "https://example.com/divany?utm_source=yandex&utm_medium=cpc&utm_campaign={campaign_id}",
+          "display_path": "divany",
+          "callouts": ["От производителя", "Гарантия 18 мес", "Доставка 1 день"]
+        }
+      ]
+    }
+  ]
+}
